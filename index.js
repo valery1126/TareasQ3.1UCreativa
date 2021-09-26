@@ -38,15 +38,14 @@ uniqC();
 let lista = [1, [2, 3], 4, 5, [6, [7]]];
 
 function aplanar(lista){
-    let listaAplanda = [].concat.apply([],lista);
-
+    //et listaAplanda = [].concat.apply([],lista);
+    let listaAplanda = lista.flat(Infinity);
 
     console.log("------ Ejecicio 2 ------")
     console.log(listaAplanda);
 }
 
 aplanar(lista);
-
 
 /* ------ Ejecicio 3 ------ */
 
