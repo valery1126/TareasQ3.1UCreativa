@@ -1,0 +1,26 @@
+{
+  "name": "tarea2",
+  "version": "1.0.0",
+  "description": "Cypress Homework2 - Valery Campos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valery1126/TareasQ3.1UCreativa.git"
+  },
+  "keywords": [
+    "ucreativa",
+    "cypress"
+  ],
+  "author": "Valery Campos Vasquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valery1126/TareasQ3.1UCreativa/issues"
+  },
+  "homepage": "https://github.com/valery1126/TareasQ3.1UCreativa#readme",
+  "dependencies": {
+    "cypress": "^8.5.0"
+  }
+}
