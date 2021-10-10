@@ -25,27 +25,27 @@ function uniqC(){
         result[i]=unique[i]+","+cont;
     }
 
-    console.log("------ Ejecicio 1 ------")
+
     console.log(data);
     console.log(result);
     
 }
-
+console.log("------ Ejecicio 1 ------")
 uniqC();
 
 /* ------ Ejecicio 2 ------ */
 
-let lista = [1, [2, 3], 4, 5, [6, [7]]];
+let lista = [1, [2, 3], 4, 5, [6, [7,[8]]]];//Probar con letras
 
 function aplanar(lista){
-    //et listaAplanda = [].concat.apply([],lista);
-    let listaAplanda = lista.flat(Infinity);
 
-    console.log("------ Ejecicio 2 ------")
-    console.log(listaAplanda);
+    let listaAplanda = lista.flat(Infinity);
+    return listaAplanda
+    
 }
 
-aplanar(lista);
+console.log("------ Ejecicio 2 ------");
+console.log(aplanar(lista));
 
 /* ------ Ejecicio 3 ------ */
 
@@ -75,14 +75,13 @@ function palabraCompuesta(arrayPalabras, meta){
         i++;
 
     }
-    console.log("------ Ejecicio 3 ------")
-    console.log("Palabra Meta: " + meta);
-    console.log(arrayPalabras);
-    console.log(result);
+    
+    return result;
 
 }
 
-palabraCompuesta(arrayPalabras,meta);
+console.log("------ Ejecicio 3 ------")
+console.log(palabraCompuesta(arrayPalabras,meta));
 
 /* ------ Ejecicio 4 ------ */
 
@@ -94,13 +93,12 @@ function elevaCuadrado(num){
         numStr = Math.pow(str[index],2).toString();
         result = result+""+numStr;
     }
-
-    console.log("------ Ejecicio 4 ------")
-    console.log("Numero: " + num);
-    console.log(result);
+    
+    return result;
 }
 
-elevaCuadrado(9119);
+console.log("------ Ejecicio 4 ------")
+console.log(elevaCuadrado(9119));
 
 
 
