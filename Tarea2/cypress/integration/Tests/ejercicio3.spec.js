@@ -7,7 +7,7 @@ describe('Retos de Cypress', () => {
   
     context('Ejercicio 3', () => {
       
-      it('validar el campo del codigo y que el formulario se envie', () => {
+      it('Submitting a form', () => {
         cy.get('#couponCode1').type('ASDF4567');
         cy.get('#couponCode1').type('{enter}');
 

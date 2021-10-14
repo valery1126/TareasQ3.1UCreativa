@@ -8,7 +8,7 @@ describe('Retos Cypress', () => {
   
     context('Ejercicio 6', () => {
 
-      it('Click derecho en elemento', () => {
+      it('Right click element', () => {
 
         cy.get('.rightclick-action-div').rightclick();
         

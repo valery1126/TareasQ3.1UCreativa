@@ -7,7 +7,8 @@ describe('Ejecicio 4 Tests', () => {
     });
   
     context('Ejercicio 4', () => {
-      it('Click to toggle popover', () => {
+      
+      it('Popover', () => {
 
         cy.get('#actions > div > div:nth-child(13) > div > button').scrollIntoView();
         cy.get('#actions > div > div:nth-child(13) > div > button').click();
@@ -17,7 +18,7 @@ describe('Ejecicio 4 Tests', () => {
         
       });
 
-      it('Click positions', () => {
+      it('Canvas', () => {
         
         cy.get('#action-canvas').click(80,75); 
         cy.get('#action-canvas').click(170,75); 
@@ -31,16 +32,22 @@ describe('Ejecicio 4 Tests', () => {
         
       });
 
-      it('Click elements', () => {
+      it('Multiple clicks', () => {
 
-        
-        
-        
+       cy.get('.action-labels > span').click({multiple:true});
   
+        cy.url().should('include', '/'); 
+        
+      });
+
+      it('Force', () => {
+
+        cy.get('#actions > div > div:nth-child(13) > div > div.action-opacity > button').click({force:true});
           
         cy.url().should('include', '/'); 
         
       });
+
 
 
 

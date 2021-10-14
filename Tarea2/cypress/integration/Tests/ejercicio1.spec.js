@@ -7,7 +7,7 @@ describe('Retos de Cypress', () => {
   
     context('Ejercicio 1', () => {
 
-      it('Validar el campo email', () => {
+      it('Typing', () => {
         cy.get('#email1').type('fake@email.com');
 
         cy.scrollTo('top');
@@ -18,7 +18,7 @@ describe('Retos de Cypress', () => {
         
       });
 
-      it('Eliminar texto del campo Email', () => {
+      it('Sending keys', () => {
 
         cy.get('#email1').type('fake@email.com');
 
@@ -32,7 +32,7 @@ describe('Retos de Cypress', () => {
         
       });
 
-      it('Insertar texto en el textarea', () => {
+      it('Typing', () => {
 
         cy.scrollTo('top')
         

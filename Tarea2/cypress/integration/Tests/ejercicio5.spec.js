@@ -7,7 +7,7 @@ describe('Retos de Cypress', () => {
     });
   
     context('Ejercicio 6', () => {
-      it('Doble click en elemento', () => {
+      it('Double click element', () => {
 
         cy.get('.action-div').dblclick();
 
