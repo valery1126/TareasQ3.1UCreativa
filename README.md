@@ -2,3 +2,5 @@
 
 Instalar dependecias
 npm install
+<br/>
+Ejecutar npm run cy:open
