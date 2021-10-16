@@ -4,48 +4,37 @@
 
 /* ------ Ejecicio 1 ------ */
 
-function uniqC(){
-    let data = ['a','a','b','b','c','a','b','c'];
-    const dataArry = new Set(data);
-    let unique = [...dataArry];
-    result = [];
-    
-
-    for (let i = 0; i < unique.length; i++){
-
-        let cont=0;
-
-        for (let j = 0; j < data.length; j++){
-
-            if(unique[i] == data[j]){
-                cont++;               
-            }
-        }
-
-        result[i]=unique[i]+","+cont;
+function uniqC(...values) {
+    return getSubArrays(...values).map((subArray) => [...new Set(subArray), subArray.length]);
+  }
+  
+  function getSubArrays(...values) {
+    let start = 0;
+    let end = 0;
+    const subValues = [];
+    for (let index = 0; index < values.length; index++) {
+      if (values[index] === values[index + 1]) end++;
+      else {
+        subValues.push(values.slice(start, end + 1));
+        start = end + 1;
+        end = start;
+      }
     }
+    return subValues;
+  }
 
-
-    console.log(data);
-    console.log(result);
-    
-}
-console.log("------ Ejecicio 1 ------")
-uniqC();
+  console.log(uniqC('a', 'a', 'a', 'b', 'b', 'c', 'a', 'b', 'b', 'c'));
 
 /* ------ Ejecicio 2 ------ */
 
-let lista = [1, [2, 3], 4, 5, [6, [7,[8]]]];//Probar con letras
+function aplanar(values){
 
-function aplanar(lista){
-
-    let listaAplanda = lista.flat(Infinity);
-    return listaAplanda
+    return values.some(Array.isArray) ? aplanar([...values.flat()]) : values;
     
 }
 
 console.log("------ Ejecicio 2 ------");
-console.log(aplanar(lista));
+console.log(aplanar(['v', [2, 3], 4, 5, [6, [7,[8]]]]));
 
 /* ------ Ejecicio 3 ------ */
 
@@ -55,7 +44,7 @@ let meta = "rainbow";
 function palabraCompuesta(arrayPalabras, meta){
 
     let  i=0;
-    let palabraComb;
+    let palabraCompuesta;
     let result;
 
     while(i < arrayPalabras.length){
@@ -64,9 +53,9 @@ function palabraCompuesta(arrayPalabras, meta){
 
         for (let index = 0; index < arrayPalabras.length; index++){
 
-            palabraComb = palabra + arrayPalabras[index];
+            palabraCompuesta = palabra + arrayPalabras[index];
 
-            if(meta == palabraComb){
+            if(meta == palabraCompuesta){
                 result = "Palabras: " + palabra +","+ arrayPalabras[index] + "\n" + "Posiciones: "+ i +","+ index;
                 break;
             }          
@@ -82,6 +71,7 @@ function palabraCompuesta(arrayPalabras, meta){
 
 console.log("------ Ejecicio 3 ------")
 console.log(palabraCompuesta(arrayPalabras,meta));
+
 
 /* ------ Ejecicio 4 ------ */
 
