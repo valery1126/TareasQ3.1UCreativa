@@ -1,4 +1,4 @@
-/* Tarea #1 
+/* Tarea #1 Correcion
 *  Valery Campos Vasquez
 */
 
@@ -22,8 +22,8 @@ function uniqC(...values) {
     }
     return subValues;
   }
-
-  console.log(uniqC('a', 'a', 'a', 'b', 'b', 'c', 'a', 'b', 'b', 'c'));
+  console.log("------ Ejecicio 1 ------");
+  console.log(uniqC('v', 'a', 'a', 'b', 'b', 'c', 'a', 'b', 'm', 'c'));
 
 /* ------ Ejecicio 2 ------ */
 
